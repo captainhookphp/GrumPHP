@@ -7,6 +7,10 @@
         {
             "name": "Andreas Heigl",
             "email": "andreas@heigl.org"
+        },
+        {
+            "name" : "Seastian Feldmann",
+            "email" : "sf@sebastian-feldmann.info"
         }
     ],
     "require": {
