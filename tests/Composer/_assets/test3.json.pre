@@ -1,0 +1,23 @@
+{
+    "pre-commit": {
+        "actions": [
+            {
+                "action": "foo",
+                "options": []
+            },
+            {
+                "action": ".\/vendor\/bin\/grumphp git:pre-commit",
+                "options": []
+            }
+        ],
+        "enabled": true
+    },
+    "commit-msg": {
+        "actions": [
+            {
+                "action": "bar",
+                "options": []
+            }
+        ]
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "captainhook/grumphp",
+    "description": "GrumPHP-Integration for CaptainHook",
+    "type": "composer-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Heigl",
+            "email": "andreas@heigl.org"
+        }
+    ],
+    "require": {
+        "php" : "^7.2|^8.0",
+        "ext-json" : "*",
+        "composer-plugin-api": "~1.0",
+        "phpro/grumphp": "^0.15.0",
+        "captainhook/captainhook": "^4.0"
+    },
+    "require-dev": {
+        "composer/composer": "^1.8",
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.2"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "CaptainHook\\GrumPHP\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "CaptainHook\\GrumPHPTest\\" : "tests/"
+        }
+    },
+    "extra": {
+        "class": "CaptainHook\\GrumPHP\\Composer\\Installer"
+    }
+}

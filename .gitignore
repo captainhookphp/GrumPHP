@@ -1,0 +1,5 @@
+/vendor/
+.phpunit*
+composer.lock
+docs/coverage
+grumphp.yml
