@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright Andrea Heigl <andreas@heigl.org>
+ * Copyright by the CaptainHook-GrumPHP Contributors
  *
  * Licenses under the MIT-license. For details see the included file LICENSE.md
  */
