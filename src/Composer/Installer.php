@@ -18,6 +18,7 @@ use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use Composer\Script\ScriptEvents;
+use function file_exists;
 use function getcwd;
 use SplFileInfo;
 
@@ -62,14 +63,20 @@ class Installer implements PluginInterface, EventSubscriberInterface
         $modifier($dispatcher);
     }
 
-    public static function installScript(Event $event) : void
+    public function installScript(Event $event) : void
     {
+        if (! file_exists(getcwd() . '/grumphp.yml')) {
+            exec('./vendor/bin/grumphp configure --no-interaction');
+        }
         $adder = new GrumPHPAdder(new SplFileInfo(getcwd() . '/captainhook.json'));
         $adder();
     }
 
-    public static function installPackage(PackageEvent $event) : void
+    public function installPackage(PackageEvent $event) : void
     {
+        if (! file_exists(getcwd() . '/grumphp.yml')) {
+            exec('./vendor/bin/grumphp configure --no-interaction');
+        }
         $adder = new GrumPHPAdder(new SplFileInfo(getcwd() . '/captainhook.json'));
         $adder();
     }
