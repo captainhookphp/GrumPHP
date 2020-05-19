@@ -17,7 +17,7 @@
         "php" : "^7.2|^8.0",
         "ext-json" : "*",
         "composer-plugin-api": "~1.0",
-        "phpro/grumphp": "^0.15.0",
+        "phpro/grumphp": "^0.18",
         "captainhook/captainhook": "^5.0"
     },
     "require-dev": {
