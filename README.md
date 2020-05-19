@@ -27,7 +27,7 @@ Your `captainhook.json` should afterwards cnotain the following sections:
     "commit-msg" : {
         "enabled" : true,
         "actions" : [{
-            "action" : "GIT_USER=$(git config user.name);GIT_EMAIL=$(git config user.email);COMMIT_MSG_FILE={FILE};DIFF=$(git -c diff.mnemonicprefix=false --no-pager diff -r -p -m -M --full-index --no-color --staged | cat);printf \"%s\n\" \"${DIFF}\" | exec ./vendor/bin/grumphp git:commit-msg \"--git-user=$GIT_USER\" \"--git-email=$GIT_EMAIL\" \"$COMMIT_MSG_FILE\"",
+            "action" : "GIT_USER=$(git config user.name);GIT_EMAIL=$(git config user.email);COMMIT_MSG_FILE={$FILE};DIFF=$(git -c diff.mnemonicprefix=false --no-pager diff -r -p -m -M --full-index --no-color --staged | cat);printf \"%s\n\" \"${DIFF}\" | exec ./vendor/bin/grumphp git:commit-msg \"--git-user=$GIT_USER\" \"--git-email=$GIT_EMAIL\" \"$COMMIT_MSG_FILE\"",
             "options" : []
         }]
     }
